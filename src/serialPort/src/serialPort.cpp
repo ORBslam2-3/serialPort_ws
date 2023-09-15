@@ -88,11 +88,11 @@ int main (int argc, char** argv)
             }
             if (data.ch[0] < middle_min) {
                 // 低于中间范围，向左转
-                angular_speed = -streer_angular_speed + (data.ch[0] - min_value) / (middle_min - min_value) * streer_angular_speed;
+                angular_speed = -(-streer_angular_speed + (data.ch[0] - min_value) / (middle_min - min_value) * streer_angular_speed);
                 
             } else if (data.ch[0] > middle_max) {
                 // 高于中间范围，向右转
-                angular_speed = -streer_angular_speed + (data.ch[0] - min_value) / (middle_min - min_value) * streer_angular_speed;
+                angular_speed = -(-streer_angular_speed + (data.ch[0] - min_value) / (middle_min - min_value) * streer_angular_speed);
             } else {
                 // 在中间范围，无转向
                 angular_speed = 0.0;
