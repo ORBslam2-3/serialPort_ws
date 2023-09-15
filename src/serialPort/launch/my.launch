@@ -1,0 +1,13 @@
+<!-- my_node.launch -->
+
+<launch>
+  <!-- 设置参数：后退 min_linear_speed，max_linear_speed，min_angular_speed -->
+  <param name="rear_linear_speed" type="double" value="10.0"/>    
+  <param name="front_linear_speed" type="double" value="20.0"/>
+  <param name="streer_angular_speed" type="double" value="5.0"/>
+
+  <!-- 启动你的 ROS 节点 -->
+  <node pkg="serialPort" type="serialPort_node" name="serialPort_node" output="screen">
+  </node>
+</launch>
+
